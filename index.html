@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Popup container - can be anything you want */
+.popup {
+    display: block; /* Displayed by default */
+    position: fixed; /* Stay in place */
+    left: 50%;
+    top: 50%;
+    width: 50%; /* Full width */
+    height: auto; /* Adjust height to fit content */
+    background-color: white; /* White background */
+    border: 2px solid #888; /* Black border */
+    z-index: 1001; /* Sit on top */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: Calibri, sans-serif;
+}
+
+/* Popup content */
+.popup-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Important message */
+.important-message {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block; /* Ensure it takes its own line */
+}
+
+/* Close button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- The popup -->
+<div id="myPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p class="important-message">Important Message:</p>
+    <p>Please note that, starting Monday 05 August 2024 Team Leaders will be required to complete the Overtime Request Form.</p>
+  </div>
+</div>
+
+<script>
+function closePopup() {
+    var popup = document.getElementById("myPopup");
+    popup.style.display = "none";
+}
+</script>
+
+</body>
+</html>
